@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>Nathan Carpenter</title>
+
+</head>
+<body>
+    <div class="container">
+        <div class="top">
+            <h1 class="nate">Nathan Carpenter</h1>
+            <img src="{{url_for('static', filename='img/nate.jpg')}}" id="pic" class="img-rounded" width="275">
+            <h3>Bachelor of Science in Mechanical Engineering <br> Stevens Institute of Technology '22</h3>
+            <h3>Coding Dojo Full Stack Web Development Certification</h3>
+        </div>
+        <div class="info">
+            <div class="contact">
+                <h1>CONTACT ME <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                </svg></h1>
+                <h2>PHONE NUMBER 
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M21 3l-6 6m0 0V4m0 5h5M5 3a2 2 0 00-2 2v1c0 8.284 6.716 15 15 15h1a2 2 0 002-2v-3.28a1 1 0 00-.684-.948l-4.493-1.498a1 1 0 00-1.21.502l-1.13 2.257a11.042 11.042 0 01-5.516-5.517l2.257-1.128a1 1 0 00.502-1.21L9.228 3.683A1 1 0 008.279 3H5z" />
+                </svg> 609 - 684 -0156</h2>
+                <h2>EMAIL
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                    </svg> nate.carpenter444@gmail.com</h2>
+            </div>
+            <div class="links">
+                <h1>LINKS <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+                </svg></h1>
+                <div class="lin">
+                    <a href="https://www.linkedin.com/in/nathan-carpenter-2418331b4/">
+                        <img src="{{url_for('static', filename='img/linkedin.png')}}" width="50">
+                    </a>
+                    <a href="https://github.com/NateCarp3">
+                        <img src="{{url_for('static', filename='img/GitHub.png')}}" width="75">
+                    </a>
+                    <a href="{{url_for('static', filename='docs/NathanCarpenterResume.pdf')}}" id="res">
+                        <img src="{{url_for('static', filename='img/resume.png')}}" width = "80">
+                    </a>
+                    <a href="{{url_for('static', filename='docs/AutomaticBrainSegmentation.html')}}">
+                        <img src="{{url_for('static', filename='img/brain.png')}}" width="55" class="img-circle">
+                    </a>
+                    <a href="https://www.stevens.edu/schaefer-school-engineering-science/departments/mechanical-engineering/undergraduate-programs/mechanical-engineering">
+                        <img src="{{url_for('static', filename='img/stevens.jpg')}}" width="55" class="img-circle">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="bio">
+            <h1>BIO</h1>
+            <br>
+            <p>
+                My name is Nathan Carpenter, and I am a recent college graduate. I am seeking full time employment as a Full Stack Engineer or Full Stack Web Developer. I am open to other technical jobs as well. I am a constant learner who enjoys doing deep research on new technologies. I take challenges head on, and have the ability to look at a problem from different angles to find the solution. Recently, I graduated from Stevens Institute of Technology with my B.S. in Mechanical Engineering on May 25, 2022. <br><br>While completing my last semester at Stevens, I also earned a Full Stack Web Development Certification program called The Coding Dojo. In the 6 month course, I learned HTML, CSS (bootstrap), Javascript (reactjs), Python, MySQL, and Flask. With these skills I have been developing full stack websites and applications like this one right here! Also during my last semester at Stevens, I led my senior design group. Our project was 3D printing brain models for medical research. This project completely showcases my skills both in Mechanical and Software Engineering. The website I built for the project is in the 'LINKS' tab along with the rest of my information. Please leave a comment below if you believe I would be a good fit for your company. Thank you.
+            </p>
+        </div>
+        <div class="form">
+            <h1>LEAVE A COMMENT</h1>
+            <form action="/new" method="POST" id="f1">
+            <label class="lab_fname"> First Name: </label>
+            <input type="text" name="fname" class="fname"><br>
+            <label class="lab_lname"> Last Name: </label>
+            <input type="text" name="lname" class="lname"><br>
+            <label class="lab_email"> Email: </label>
+            <input type="text" name="email" class="email"><br>
+            <label class="lab_comment">Comment:</label>
+            <textarea name="comment" rows="8" cols="15" class="comment"></textarea><br>
+            <button onclick="myFunction()" type="submit">Submit</button>
+            </form>
+            <script>
+            function myFunction() {
+                alert ("Your comment has been saved! Thank You");
+            }
+            </script>
+
+        </div>
+    </div>
+</body>
+</html>

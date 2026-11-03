@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Comment received — Nathan Carpenter</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='site.css') }}">
+</head>
+<body>
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="/">NC</a>
+    <nav aria-label="Main"><ul><li><a href="/">Home</a></li></ul></nav>
+  </div>
+</header>
+<main class="thanks">
+  <div class="wrap">
+    <p class="hello">Comment received</p>
+    <h1 style="margin-top:8px;font-weight:600;font-size:clamp(44px,7vw,80px);line-height:1;letter-spacing:-.03em">Thanks, {{ user.first_name }}.</h1>
+    <p class="role" style="margin-top:16px;font-weight:300;font-size:clamp(20px,2.6vw,28px);color:var(--muted)">I'll get back to you at the email below.</p>
+    <dl class="receipt">
+      <div><dt>Name</dt><dd>{{ user.first_name }} {{ user.last_name }}</dd></div>
+      <div><dt>Email</dt><dd>{{ user.email }}</dd></div>
+      <div><dt>Comment</dt><dd>{{ user.comment }}</dd></div>
+    </dl>
+    <div class="cta"><a class="btn primary" href="/">Back to home</a></div>
+  </div>
+</main>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Comments — Nathan Carpenter</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='site.css') }}">
+</head>
+<body>
+<main class="thanks">
+  <div class="wrap">
+    <p class="hello">Private</p>
+    <h1 style="margin-top:8px;font-weight:600;font-size:clamp(36px,6vw,64px);line-height:1;letter-spacing:-.03em">Comments ({{ users|length }})</h1>
+    {% for u in users %}
+    <dl class="receipt">
+      <div><dt>{{ u.created_at.strftime('%b %d, %Y') }}</dt><dd>{{ u.first_name }} {{ u.last_name }} · {{ u.email }}</dd></div>
+      <div><dt>Comment</dt><dd>{{ u.comment }}</dd></div>
+    </dl>
+    {% else %}
+    <p class="lead" style="margin-top:32px">No comments yet.</p>
+    {% endfor %}
+  </div>
+</main>
+</body>
+</html>

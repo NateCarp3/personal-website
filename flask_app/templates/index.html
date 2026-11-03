@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nathan Carpenter — Project Engineer</title>
+<meta name="description" content="Nathan R. Carpenter, PMP. Project Engineer and developer based in New Jersey.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='site.css') }}">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="logo" href="#top">NC</a>
+    <nav aria-label="Main"><ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul></nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="top">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="hello">Hello, I'm</p>
+        <h1>Nathan Carpenter.</h1>
+        <p class="role">Project Engineer &amp; developer.</p>
+        <div class="cta">
+          <a class="btn primary" href="#contact">Contact me</a>
+          <a class="btn" href="{{ url_for('static', filename='docs/Nathan_Carpenter_Resume.pdf') }}" target="_blank">Download resume</a>
+        </div>
+      </div>
+      <img class="portrait" src="{{ url_for('static', filename='img/nate.jpg') }}" alt="Photo of Nathan Carpenter" width="200" height="200">
+    </div>
+  </section>
+
+  <section class="row" id="about">
+    <div class="wrap">
+      <h2>About</h2>
+      <div class="body">
+        <p class="lead">PMP-certified, with a B.S. in Mechanical Engineering from Stevens Institute of Technology. I lead installs from site coordination through commissioning: directing contractors, keeping work on schedule and to spec, and solving the electrical and software issues that stall a job.</p>
+        <p class="lead">I also write full-stack tools in Python, Flask, JavaScript and MySQL, and have hands-on experience with 3D modeling and printing.</p>
+        <div class="stats">
+          <div><b>15+</b><span>commercial installs led</span></div>
+          <div><b>100+</b><span>clients serviced</span></div>
+          <div><b>0</b><span>safety incidents</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="row" id="experience">
+    <div class="wrap">
+      <h2>Experience</h2>
+      <div class="body jobs">
+        <article class="job">
+          <p class="when">June 2022 — Present · New York, NY</p>
+          <h3>Project Engineer <span>· View Inc.</span></h3>
+          <ul>
+            <li>Led installation and commissioning of View Smart Glass systems on 15+ commercial projects plus several residential properties.</li>
+            <li>Led the install at Charlotte Douglas International Airport: managed the electrical and glazing subcontractors, programmed the control panels, and tested every window.</li>
+            <li>View's only Project Engineer on the East Coast, servicing 100+ existing clients and resolving electrical and software faults with the Field App and Commissioning Dashboard.</li>
+            <li>Coordinated general contractors, electricians and glaziers to deliver on schedule; ran site visits, marked up engineering drawings, and verified work against specs.</li>
+            <li>Maintained a perfect safety record across multiple active job sites.</li>
+          </ul>
+        </article>
+        <article class="job">
+          <p class="when">May 2021 — May 2022 · Hoboken, NJ</p>
+          <h3>Lead Researcher, Soft Matter Biomechanics <span>· Stevens Institute of Technology</span></h3>
+          <ul>
+            <li>Led a biomedical research project producing 3D-printed brain models from MRI scan data.</li>
+            <li>Built the imaging-to-print workflow, converting NIfTI scans into printable meshes with FreeSurfer, MeshLab and Meshmixer.</li>
+            <li>Operated and maintained resin, FDM and industrial 3D printers (Phrozen, Flashforge, Creality, Stratasys).</li>
+            <li>Developed a full-stack project documentation website (HTML, CSS, JavaScript, Flask, MySQL).</li>
+          </ul>
+          <a class="text-link" href="{{ url_for('static', filename='docs/AutomaticBrainSegmentation.html') }}" target="_blank">View the project site →</a>
+        </article>
+        <article class="job">
+          <p class="when">Sept 2019 — May 2021 · New York, NY</p>
+          <h3>Field Technician <span>· ANC Sports Enterprises</span></h3>
+          <ul>
+            <li>Installed and maintained digital signage systems at major NYC transportation hubs, including the World Trade Center.</li>
+            <li>Monitored LED displays and control software to keep advertising running without downtime, while studying engineering full-time.</li>
+          </ul>
+        </article>
+        <article class="job">
+          <p class="when">June 2019 — Aug 2019 · Mountainside, NJ</p>
+          <h3>Project Management Intern <span>· Union Paving Construction Co.</span></h3>
+          <ul>
+            <li>Supported site management and subcontractor coordination; performed materials takeoffs.</li>
+            <li>Evaluated subcontractor bids and contributed to project planning.</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="row" id="skills">
+    <div class="wrap">
+      <h2>Skills</h2>
+      <div class="body groups">
+        <div><h3>Field &amp; Systems</h3><p>Commissioning, hardware/software troubleshooting, electrical systems testing, control panel programming</p></div>
+        <div><h3>Project Delivery</h3><p>GC &amp; subcontractor coordination, drawing markups, bid evaluation, materials takeoffs, site safety</p></div>
+        <div><h3>Software</h3><p>Python, Flask, JavaScript, HTML/CSS, MySQL</p></div>
+        <div><h3>3D &amp; Fabrication</h3><p>FreeSurfer, MeshLab, Meshmixer, resin/FDM/industrial printing</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="row" id="education">
+    <div class="wrap">
+      <h2>Education</h2>
+      <div class="body edu">
+        <div><div><h3>Project Management Professional (PMP)</h3><p>Project Management Institute</p></div><p class="when">2026</p></div>
+        <div><div><h3>B.S. Mechanical Engineering</h3><p><a href="https://www.stevens.edu/schaefer-school-engineering-science/departments/mechanical-engineering/undergraduate-programs/mechanical-engineering" target="_blank" rel="noopener">Stevens Institute of Technology</a> · Hoboken, NJ</p></div><p class="when">May 2022</p></div>
+        <div><div><h3>Full Stack Web Development Certificate</h3><p>Coding Dojo</p></div><p class="when">July 2022</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="row" id="contact">
+    <div class="wrap">
+      <h2>Contact</h2>
+      <div class="body">
+        <a class="email" href="mailto:nate.carpenter444@gmail.com">nate.carpenter444@gmail.com</a>
+        <div class="links">
+          <a href="https://www.linkedin.com/in/nathan-carpenter-2418331b4/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://github.com/NateCarp3" target="_blank" rel="noopener">GitHub</a>
+          <a href="{{ url_for('static', filename='docs/Nathan_Carpenter_Resume.pdf') }}" target="_blank">Resume (PDF)</a>
+        </div>
+
+        <p class="form-intro">Leave a comment</p>
+        <p>Recruiter, collaborator or just saying hi? Leave a note and I'll get back to you.</p>
+        {% if request.args.get('comments') == 'off' %}<p class="lead" style="margin-top:16px;color:var(--accent)">Comments aren't switched on here yet. Please email me instead.</p>{% endif %}
+        <form class="comment" action="/new" method="POST">
+          <div><label for="fname">First name</label><input id="fname" type="text" name="fname" autocomplete="given-name" required></div>
+          <div><label for="lname">Last name</label><input id="lname" type="text" name="lname" autocomplete="family-name" required></div>
+          <div class="full"><label for="email">Email</label><input id="email" type="email" name="email" autocomplete="email" required></div>
+          <div class="full"><label for="comment">Comment</label><textarea id="comment" name="comment" required></textarea></div>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 Nathan Carpenter</div>
+</footer>
+
+<script>
+  (function(){
+    var nav=document.getElementById('nav');
+    function f(){ nav.classList.toggle('scrolled', window.scrollY>8); }
+    window.addEventListener('scroll', f, {passive:true}); f();
+  })();
+</script>
+</body>
+</html>

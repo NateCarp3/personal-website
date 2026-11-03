@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+
+# Old local MySQL setup: contains a local password, never commit it
+flask_app/config/mySQLconnection.py
+
+# Local database design files
+*.mwb
+*.mwb.bak
+natewb.sql
+old_mysql_version/
